@@ -114,6 +114,6 @@ import org.jenkinsci.plugins.workflow.cps.GroovyShellDecorator;
     String[] parts = url.substring(4).split("/job/");
     parts[parts.length-1] = parts[parts.length-1].split("/")[0];
     String partialPath = StringUtils.join(parts, "/");
-    return "/var/jenkins_home/workspace/" + partialPath + "@script/" + libraries.get(0);
+    return System.getenv("JENKINS_HOME") + "/workspace/" + partialPath + "@script/" + libraries.get(0);
   }
 }
