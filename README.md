@@ -26,10 +26,3 @@ repository in place
     to classpath every time your pipeline is ran.
     You can use import statements as if `dir_in_repo` would
     be groovy sources root
-    
-### Identified problems
-
-Right now plugin depends on `JENKINS_HOME` directory to be set to
-`/var/jenkins_home` which may not be the case for all Jenkins
-instances. Please feel free to contribute if you have an idea
-on how to get that per-instance variable properly.
